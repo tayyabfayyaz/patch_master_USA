@@ -52,7 +52,7 @@ export function HeroSection() {
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-gold-dark text-lg px-8"
           >
-            <Link href="/contact">
+            <Link href="/quote">
               Get Your Free Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

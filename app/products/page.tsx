@@ -9,41 +9,71 @@ const products = [
     id: 1,
     name: "Custom Embroidered Patches",
     description:
-      "Classic, professional look with raised thread designs. Perfect for uniforms, caps, and jackets with vibrant colors and durability.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+      "Our custom embroidered patches are crafted with high-quality threads and backing to ensure durability and a professional finish. They are perfect for uniforms, jackets, and bags, providing a classic look that represents your brand with excellence.",
+    image: "/patch_2.jpg",
   },
   {
     id: 2,
     name: "Woven Patches",
     description:
-      "Intricate details with a smooth, flat finish. Ideal for detailed logos and smaller text with a refined appearance.",
-    image:
-      "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=600&q=80",
+      "Woven patches offer a higher level of detail and a smooth finish compared to embroidered patches. They are ideal for intricate designs and small lettering, making them a great choice for detailed logos and branding.",
+    image: "/patch_9.jpg",
   },
   {
     id: 3,
     name: "Leather Patches",
     description:
-      "Premium, sophisticated look with genuine or faux leather. Perfect for jeans, bags, and high-end apparel branding.",
-    image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
+      "Add a touch of sophistication to your products with our custom leather patches. Made from genuine and faux leather, these patches are perfect for jeans, hats, and bags, offering a rugged yet refined look.",
+    image: "/patch_12.jpg",
   },
   {
     id: 4,
     name: "PVC / Rubber Patches",
     description:
-      "3D dimensional designs that are waterproof and durable. Great for outdoor gear, tactical wear, and sports teams.",
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=600&q=80",
+      "For a modern and durable option, our PVC and rubber patches are the way to go. These patches are waterproof, weather-resistant, and can be molded into 3D designs, making them perfect for outdoor gear and tactical applications.",
+    image: "/patch_13.png",
   },
   {
     id: 5,
     name: "Chenille Patches",
     description:
-      "Soft, fuzzy texture with a vintage varsity feel. Popular for letterman jackets, school apparel, and retro designs.",
-    image:
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
+      "Chenille patches provide a soft, fuzzy texture that is perfect for letterman jackets and school apparel. Their vintage look and feel make them a popular choice for creating a retro or classic aesthetic.",
+    image: "/patch_14.png",
+  },
+  {
+    id: 6,
+    name: "Printed Patches",
+    description:
+      "Achieve photographic detail with our printed patches. Ideal for complex graphics and gradients, these patches offer vibrant colors and a smooth finish, perfect for showcasing intricate artwork.",
+    image: "/patch_10.jpg",
+  },
+  {
+    id: 7,
+    name: "Name Patches",
+    description:
+      "Personalize uniforms, workwear, and gear with custom name patches. Available in various fonts and colors, these patches add a professional and cohesive look for teams and individuals.",
+    image: "/patch_15.jpg",
+  },
+  {
+    id: 8,
+    name: "Military Patches",
+    description:
+      "Durable and precise, our military patches meet strict standards for quality and authenticity. Designed for service members, veterans, and enthusiasts, they honor traditions with impeccable detail.",
+    image: "/patch_17.png",
+  },
+  {
+    id: 9,
+    name: "Biker Patches",
+    description:
+      "Ride in style with our rugged biker patches. Featuring bold designs and durable construction, these patches are perfect for vests, jackets, and gear, making a statement on the open road.",
+    image: "/patch_18.jpg",
+  },
+  {
+    id: 10,
+    name: "Sport Patches",
+    description:
+      "Celebrate team spirit and achievements with our dynamic sport patches. Perfect for jerseys, caps, and fan apparel, these patches showcase logos, mascots, and victories with vibrant designs.",
+    image: "/patch_19.png",
   },
 ];
 
@@ -51,14 +81,14 @@ const Products = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-navy text-primary-foreground">
+      <section className="py-16 md:py-24 bg-gray-200 text-black">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Premium Custom Patches USA
             <br />
-            <span className="text-accent">Made for Global Brands</span>
+            <span className="text-amber-600">Made for Global Brands</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-black">
             Patchmaster USA is a trusted custom patches manufacturer in the USA,
             delivering high-end custom patches for apparel brands, uniform makers,
             corporate partners, retailers, and resellers across the United States,
@@ -120,7 +150,7 @@ const Products = () => {
                     asChild
                     className="w-full bg-accent text-accent-foreground hover:bg-gold-dark"
                   >
-                    <Link href="/contact">
+                    <Link href="/quote">
                       Get a Quote
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -148,7 +178,7 @@ const Products = () => {
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-gold-dark text-lg px-10"
           >
-            <Link href="/contact">
+            <Link href="/quote">
               Get Your Free Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

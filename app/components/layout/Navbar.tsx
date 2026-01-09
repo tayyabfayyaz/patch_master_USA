@@ -38,7 +38,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-primary">
-              Patch<span className="text-accent">Master</span>USA
+              Patch<span className="text-amber-600">Master</span>USA
             </span>
           </Link>
 
@@ -47,19 +47,14 @@ export function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(link.path) ? "text-accent" : "text-foreground/80"
+                className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+                  isActive(link.path) ? "text-amber-600" : "text-foreground/80"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Button
-              asChild
-              className="bg-accent text-accent-foreground hover:bg-gold-dark"
-            >
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
+<Link href="/quote">Get a Quote</Link>
           </div>
 
           <button
@@ -93,7 +88,7 @@ export function Navbar() {
               asChild
               className="w-full bg-accent text-accent-foreground hover:bg-gold-dark"
             >
-              <Link href="/contact" onClick={hideMobileMenu}>
+              <Link href="/quote" onClick={hideMobileMenu}>
                 Get a Quote
               </Link>
             </Button>

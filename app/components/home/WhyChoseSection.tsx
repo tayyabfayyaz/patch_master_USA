@@ -46,11 +46,11 @@ export function WhyChooseSection() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
+              className="border-none shadow-lg hover:shadow-2xl cursor-pointer transition-shadow duration-300 bg-card"
             >
               <CardContent className="p-6 text-center">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center">
-                  <feature.icon className="h-7 w-7 text-accent" />
+                  <feature.icon className="h-7 w-7 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   {feature.title}
