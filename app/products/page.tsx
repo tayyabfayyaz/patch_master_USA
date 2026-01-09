@@ -7,73 +7,73 @@ import { ArrowRight } from "lucide-react";
 const products = [
   {
     id: 1,
-    name: "Custom Embroidered Patches",
+    name: "Chenille Patch",
     description:
-      "Our custom embroidered patches are crafted with high-quality threads and backing to ensure durability and a professional finish. They are perfect for uniforms, jackets, and bags, providing a classic look that represents your brand with excellence.",
-    image: "/patch_2.jpg",
+      "High-quality custom chenille patch.",
+    image: "/Chenille_patch.png",
   },
   {
     id: 2,
-    name: "Woven Patches",
+    name: "Chenille Patch (2)",
     description:
-      "Woven patches offer a higher level of detail and a smooth finish compared to embroidered patches. They are ideal for intricate designs and small lettering, making them a great choice for detailed logos and branding.",
-    image: "/patch_9.jpg",
+      "High-quality custom chenille patch.",
+    image: "/Chenille_patch (2).png",
   },
   {
     id: 3,
-    name: "Leather Patches",
+    name: "Embroidery Patch",
     description:
-      "Add a touch of sophistication to your products with our custom leather patches. Made from genuine and faux leather, these patches are perfect for jeans, hats, and bags, offering a rugged yet refined look.",
-    image: "/patch_12.jpg",
+      "High-quality custom embroidery patch.",
+    image: "/Embroiderey_patch.png",
   },
   {
     id: 4,
-    name: "PVC / Rubber Patches",
+    name: "Heat Transfer Vinyl",
     description:
-      "For a modern and durable option, our PVC and rubber patches are the way to go. These patches are waterproof, weather-resistant, and can be molded into 3D designs, making them perfect for outdoor gear and tactical applications.",
-    image: "/patch_13.png",
+      "High-quality custom heat transfer vinyl.",
+    image: "/Heat_transfer_vinyle.jpeg",
   },
   {
     id: 5,
-    name: "Chenille Patches",
+    name: "Leather Patch",
     description:
-      "Chenille patches provide a soft, fuzzy texture that is perfect for letterman jackets and school apparel. Their vintage look and feel make them a popular choice for creating a retro or classic aesthetic.",
-    image: "/patch_14.png",
+      "High-quality custom leather patch.",
+    image: "/Leather_patch.jpg",
   },
   {
     id: 6,
-    name: "Printed Patches",
+    name: "Military Patch",
     description:
-      "Achieve photographic detail with our printed patches. Ideal for complex graphics and gradients, these patches offer vibrant colors and a smooth finish, perfect for showcasing intricate artwork.",
-    image: "/patch_10.jpg",
+      "High-quality custom military patch.",
+    image: "/millatry_patch.jpeg",
   },
   {
     id: 7,
-    name: "Name Patches",
+    name: "PVC Rubber Patch",
     description:
-      "Personalize uniforms, workwear, and gear with custom name patches. Available in various fonts and colors, these patches add a professional and cohesive look for teams and individuals.",
-    image: "/patch_15.jpg",
+      "High-quality custom PVC rubber patch.",
+    image: "/PVC_Rubber_patch.png",
   },
   {
     id: 8,
-    name: "Military Patches",
+    name: "Sport Patch",
     description:
-      "Durable and precise, our military patches meet strict standards for quality and authenticity. Designed for service members, veterans, and enthusiasts, they honor traditions with impeccable detail.",
-    image: "/patch_17.png",
+      "High-quality custom sport patch.",
+    image: "/sport_patch.jpeg",
   },
   {
     id: 9,
-    name: "Biker Patches",
+    name: "Sports Patch",
     description:
-      "Ride in style with our rugged biker patches. Featuring bold designs and durable construction, these patches are perfect for vests, jackets, and gear, making a statement on the open road.",
-    image: "/patch_18.jpg",
+      "High-quality custom sports patch.",
+    image: "/sports_patch.jpeg",
   },
   {
     id: 10,
-    name: "Sport Patches",
+    name: "Woven Patch",
     description:
-      "Celebrate team spirit and achievements with our dynamic sport patches. Perfect for jerseys, caps, and fan apparel, these patches showcase logos, mascots, and victories with vibrant designs.",
-    image: "/patch_19.png",
+      "High-quality custom woven patch.",
+    image: "/Woven_patch.png",
   },
 ];
 

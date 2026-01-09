@@ -4,6 +4,7 @@ import { AboutSection } from "@/app/components/home/AboutSection";
 import { WhyChooseSection } from "@/app/components/home/WhyChoseSection";
 import { SpecialOfferSection } from "@/app/components/home/SpecialOfferSection";
 import { PromiseSection } from "@/app/components/home/PromiseSection";
+import { ReviewsSection } from "@/app/components/home/ReviewsSection";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <WhyChooseSection />
       <SpecialOfferSection />
       <PromiseSection />
+      <ReviewsSection />
     </>
   );
 };

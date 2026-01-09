@@ -21,29 +21,35 @@ const geistMono = Geist_Mono({
 /* ✅ Global SEO Metadata */
 export const metadata: Metadata = {
   title: {
-    default: "Araish Constructors",
-    template: "%s | Araish Constructors",
+    default: "PatchMasterUSA",
+    template: "%s | PatchMasterUSA",
   },
   description:
-    "Araish Constructors provides premium construction materials, waterproofing solutions, and civil construction services across Pakistan.",
+    "PatchMasterUSA provides premium custom patches, including embroidered, woven, leather, PVC/rubber, and chenille patches, for brands and individuals worldwide.",
   keywords: [
-    "construction",
-    "building materials",
-    "civil construction",
-    "waterproofing",
-    "Araish Constructors",
+    "custom patches",
+    "embroidered patches",
+    "woven patches",
+    "leather patches",
+    "PVC patches",
+    "chenille patches",
+    "PatchMasterUSA",
+    "patches USA",
   ],
-  authors: [{ name: "Araish Constructors" }],
-  creator: "Araish Constructors",
-  metadataBase: new URL("https://araishconstructors.com"),
+  authors: [{ name: "PatchMasterUSA" }],
+  creator: "PatchMasterUSA",
+  metadataBase: new URL("https://patchmasterusa.com"),
   openGraph: {
-    title: "Araish Constructors",
+    title: "PatchMasterUSA - Premium Custom Patches",
     description:
-      "Trusted supplier of construction materials and civil construction solutions in Pakistan.",
-    url: "https://araishconstructors.com",
-    siteName: "Araish Constructors",
+      "Trusted manufacturer of custom embroidered, woven, leather, PVC, and chenille patches in the USA.",
+    url: "https://patchmasterusa.com",
+    siteName: "PatchMasterUSA",
     locale: "en_US",
     type: "website",
+  },
+  icons: {
+    icon: "/patch_13.png",
   },
 };
 
