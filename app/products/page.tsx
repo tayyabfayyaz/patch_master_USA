@@ -13,13 +13,6 @@ const products = [
     image: "/Chenille_patch.png",
   },
   {
-    id: 2,
-    name: "Chenille Patch (2)",
-    description:
-      "High-quality custom chenille patch.",
-    image: "/Chenille_patch (2).png",
-  },
-  {
     id: 3,
     name: "Embroidery Patch",
     description:
@@ -60,13 +53,6 @@ const products = [
     description:
       "High-quality custom sport patch.",
     image: "/sport_patch.jpeg",
-  },
-  {
-    id: 9,
-    name: "Sports Patch",
-    description:
-      "High-quality custom sports patch.",
-    image: "/sports_patch.jpeg",
   },
   {
     id: 10,

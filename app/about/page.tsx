@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { WhyChooseSection } from "@/app/components/about/WhyChooseSection";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  ArrowRight,
   Award,
   Users,
   Target,
@@ -60,14 +58,14 @@ const About = () => {
             About <span className="text-accent">PatchMasterUSA</span>
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
-            Your trusted partner for premium custom patches.
-            We’re dedicated to craftsmanship, quality, and customer satisfaction.
+            Your trusted partner for premium custom patches. We’re dedicated to
+            craftsmanship, quality, and customer satisfaction.
           </p>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section id="our-story" className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
@@ -99,6 +97,61 @@ const About = () => {
         </div>
       </section>
 
+      {/* Vision Section */}
+      <section id="our-vision" className="py-16 md:py-24 bg-secondary">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+              Our Vision
+            </h2>
+
+            <div className="space-y-6 text-muted-foreground text-lg">
+              <p>
+                Our vision is to be the world’s most trusted and innovative
+                custom patch manufacturer. We aim to empower brands, teams, and
+                individuals to express their identity and tell their stories
+                through high-quality, custom-made patches. We are committed to
+                sustainable practices, exceptional customer service, and a
+                culture of continuous improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commitment to Sustainability Section */}
+      <section
+        id="our-commitment-to-sustainability"
+        className="py-16 md:py-24 bg-background"
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+              Our Commitment to Sustainability
+            </h2>
+
+            <div className="space-y-6 text-muted-foreground text-lg">
+              <p>
+                At PatchMasterUSA, we are committed to protecting our planet for
+                future generations. We believe that great products shouldn’t
+                come at the expense of the environment. That’s why we’ve
+                integrated sustainable practices into every aspect of our
+                operations, from sourcing materials to our manufacturing
+                processes.
+              </p>
+              <p>
+                Our commitment to sustainability includes using eco-friendly
+                materials, reducing waste, and conserving energy. We partner with
+                suppliers who share our values and are dedicated to responsible
+                sourcing. We are constantly exploring new ways to minimize our
+                environmental footprint and make a positive impact on the
+                world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Manufacturing Process */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4">
@@ -110,7 +163,6 @@ const About = () => {
               From concept to creation, we ensure excellence at every step.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -139,12 +191,8 @@ const About = () => {
                   <span className="block text-4xl font-bold text-accent mb-4">
                     {item.step}
                   </span>
-                  <h3 className="text-lg font-semibold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {item.desc}
-                  </p>
+                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -153,7 +201,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -168,15 +216,13 @@ const About = () => {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="flex items-start gap-4 p-6 rounded-lg hover:bg-secondary transition-colors"
+                className="flex items-start gap-4 p-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
                   <value.icon className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">
-                    {value.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold mb-1">{value.title}</h3>
                   <p className="text-muted-foreground text-sm">
                     {value.description}
                   </p>
@@ -187,28 +233,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Work With Us?
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            Join thousands of satisfied clients who trust PatchMasterUSA.
-          </p>
+      <WhyChooseSection />
 
-          <Button
-            asChild
-            size="lg"
-            className="bg-accent text-accent-foreground hover:bg-gold-dark px-10 text-lg"
-          >
-            <Link href="/contact" className="inline-flex items-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
     </>
   );
 };

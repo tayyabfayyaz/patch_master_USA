@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Mail, Twitter, Facebook, Instagram } from "lucide-react";
 
 const ContactPage = () => {
   return (
@@ -37,15 +37,7 @@ const ContactPage = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5" />
-                  <span>contact@example.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>+1 (123) 456-7890</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5" />
-                  <span>123 Main St, Anytown, USA</span>
+                  <span>matchpasteruas@araish.store</span>
                 </div>
               </div>
               <h2 className="text-2xl font-bold mt-8 mb-4">Follow Us</h2>
