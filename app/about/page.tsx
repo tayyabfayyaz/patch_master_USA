@@ -1,3 +1,5 @@
+"use client";
+
 import { WhyChooseSection } from "@/app/components/about/WhyChooseSection";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -52,13 +54,26 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-navy text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <section className="relative py-16 md:py-24 text-primary-foreground overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/about_background.mp4" type="video/mp4" />
+        </video>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             About <span className="text-accent">PatchMasterUSA</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
-            Your trusted partner for premium custom patches. We’re dedicated to
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+            Your trusted partner for premium custom patches. We're dedicated to
             craftsmanship, quality, and customer satisfaction.
           </p>
         </div>

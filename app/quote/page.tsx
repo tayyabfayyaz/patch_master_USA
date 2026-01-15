@@ -25,6 +25,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "5317e50f-6aba-4784-bafd-b3fe3a5da78d";
+
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -32,7 +34,6 @@ const formSchema = z.object({
   width: z.string(),
   height: z.string(),
   colors: z.string(),
-  artwork: z.any(),
   quantity: z.string(),
   requirements: z.string().optional(),
 });
@@ -49,7 +50,6 @@ const QuotePage = () => {
       width: "",
       height: "",
       colors: "",
-      artwork: null,
       quantity: "",
       requirements: "",
     },
@@ -57,34 +57,46 @@ const QuotePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
-    const formData = new FormData();
 
-    Object.entries(values).forEach(([key, value]) => {
-      if (key === "artwork") {
-        if (value instanceof FileList) {
-          for (let i = 0; i < value.length; i++) {
-            formData.append(key, value[i]);
-          }
-        }
-      } else {
-        formData.append(key, value);
-      }
-    });
+    const formData = new FormData();
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New Quote Request - Patchmaster USA");
+    formData.append("from_name", "Patchmaster USA Website");
+    formData.append("replyto", values.email);
+    formData.append("botcheck", "");
+
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("Patch Type", values.patchType);
+    formData.append("Size", `${values.width}" x ${values.height}"`);
+    formData.append("Colors", values.colors);
+    formData.append("Quantity", values.quantity);
+    formData.append("Additional Requirements", values.requirements || "None");
 
     try {
-      const response = await fetch("/api/send-quote", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
 
-      if (response.ok) {
-        toast.success("Quote request sent successfully!");
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Quote request sent successfully! We'll get back to you soon.");
         form.reset();
       } else {
-        toast.error("Failed to send quote request. Please try again later.");
+        console.error("Web3Forms Error:", data);
+        if (data.message?.includes("Invalid access key")) {
+          toast.error("Configuration error. Please contact support.");
+        } else if (data.message?.includes("email")) {
+          toast.error("Email delivery failed. Please try again.");
+        } else {
+          toast.error(data.message || "Failed to send quote request. Please try again later.");
+        }
       }
     } catch (error) {
-      toast.error("An error occurred. Please try again later.");
+      console.error("Fetch error:", error);
+      toast.error("Network error. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -201,23 +213,6 @@ const QuotePage = () => {
                 <FormLabel>Colors</FormLabel>
                 <FormControl>
                   <Input placeholder="e.g., Red, Blue, White" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="artwork"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Design / Artwork</FormLabel>
-                <FormControl>
-                  <Input
-                    type="file"
-                    onChange={(e) => field.onChange(e.target.files)}
-                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
