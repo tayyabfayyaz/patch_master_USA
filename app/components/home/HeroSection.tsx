@@ -15,10 +15,10 @@ export function HeroSection() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+          poster=""
         >
           <source
-            src="public/background_video.mp4"
+            src="/background_video.mp4"
             type="video/mp4"
           />
         </video>
