@@ -66,7 +66,7 @@ const products = [
     name: "Biker Patch",
     description:
       "High-quality custom biker patch.",
-    image: "/Biker_patch.png",
+    image: "/sports_patch.jpeg",
   },
 ];
 
