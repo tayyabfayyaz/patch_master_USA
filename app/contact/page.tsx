@@ -37,7 +37,7 @@ const ContactPage = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5" />
-                  <span>matchpasteruas@araish.store</span>
+                  <span>matchpasteruas@gmail.com</span>
                 </div>
               </div>
               <h2 className="text-2xl font-bold mt-8 mb-4">Follow Us</h2>

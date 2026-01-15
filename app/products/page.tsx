@@ -61,6 +61,13 @@ const products = [
       "High-quality custom woven patch.",
     image: "/Woven_patch.png",
   },
+  {
+    id: 11,
+    name: "Biker Patch",
+    description:
+      "High-quality custom biker patch.",
+    image: "/Biker_patch.png",
+  },
 ];
 
 const Products = () => {
