@@ -82,7 +82,7 @@ const Products = () => {
             <span className="text-amber-600">Made for Global Brands</span>
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-black">
-            Patchmaster USA is a trusted custom patches manufacturer in the USA,
+            Patchmaster USA is a trusted custom patches manufacturer,
             delivering high-end custom patches for apparel brands, uniform makers,
             corporate partners, retailers, and resellers across the United States,
             Canada, UK & Europe.

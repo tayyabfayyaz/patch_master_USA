@@ -32,7 +32,7 @@ export function HeroSection() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
           Premium Custom Patches
           <br />
-          <span className="text-accent">Made in USA</span>
+          {/* <span className="text-accent">Made in USA</span> */}
         </h1>
 
         <p
