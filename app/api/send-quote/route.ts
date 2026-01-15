@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
   // IMPORTANT: This is a test SMTP server. For production, replace with a real SMTP provider.
   const mailOptions = {
     from: `"Patchmaster" <${email}>`,
-    to: "fayyaztayyab931@gmail.com",
+    to: "matchpasteruas@araish.store",
     subject: "New Quote Request",
     html: `
       <h1>New Quote Request</h1>
